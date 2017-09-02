@@ -8,6 +8,9 @@ namespace PaceTime.WebAPI.Data
 {
     public class BookUserStore : UserStore<IdentityUser>
     {
-
+        public BookUserStore()
+            : base(new BooksContext())
+        {
+        }
     }
 }
