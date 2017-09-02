@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PaceTime.WebAPI.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -12,6 +14,7 @@ namespace PaceTime.WebAPI
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            Database.SetInitializer(new Initializer());
         }
     }
 }

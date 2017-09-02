@@ -5,11 +5,16 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C7BFB5FE-06FC-4699-B426-439DB4C2509C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaceTime.WebAPI", "Presentation\PaceTime.WebAPI\PaceTime.WebAPI.csproj", "{8821F7BE-A759-4F3A-9E94-CCFC9757DF99}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9E93762E-5531-436F-B109-BFDCB4106552}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaceTime.Domain.Models", "Core\PaceTime.Domain.Models\PaceTime.Domain.Models.csproj", "{0C2C0037-949E-4541-96E7-81AB5C22AB6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaceTime.WebAPI", "Presentation\PaceTime.WebAPI\PaceTime.WebAPI.csproj", "{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{88257D4A-34D3-4C44-AB48-EBC860CD0A99}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,20 +22,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8821F7BE-A759-4F3A-9E94-CCFC9757DF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8821F7BE-A759-4F3A-9E94-CCFC9757DF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8821F7BE-A759-4F3A-9E94-CCFC9757DF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8821F7BE-A759-4F3A-9E94-CCFC9757DF99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0C2C0037-949E-4541-96E7-81AB5C22AB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0C2C0037-949E-4541-96E7-81AB5C22AB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C2C0037-949E-4541-96E7-81AB5C22AB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C2C0037-949E-4541-96E7-81AB5C22AB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8821F7BE-A759-4F3A-9E94-CCFC9757DF99} = {C7BFB5FE-06FC-4699-B426-439DB4C2509C}
 		{0C2C0037-949E-4541-96E7-81AB5C22AB6A} = {9E93762E-5531-436F-B109-BFDCB4106552}
+		{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0} = {C7BFB5FE-06FC-4699-B426-439DB4C2509C}
 	EndGlobalSection
 EndGlobal
