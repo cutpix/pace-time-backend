@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PaceTime.WebAPI
 {
@@ -12,6 +13,7 @@ namespace PaceTime.WebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            EnableCors(config);
             ConfigureFormatters();
 
             // Web API routes
@@ -32,6 +34,15 @@ namespace PaceTime.WebAPI
 
             settings.Formatting = Formatting.Indented;
             settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+        }
+
+        private static void EnableCors(HttpConfiguration config)
+        {
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            var requestHandler = new PreflightRequestsHandler();
+
+            config.EnableCors(cors);
+            config.MessageHandlers.Add(requestHandler);
         }
     }
 }
