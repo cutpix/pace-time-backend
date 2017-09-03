@@ -7,11 +7,15 @@ using Owin;
 
 namespace PaceTime.WebAPI
 {
-    public partial class Startup
+    public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
             ConfigureOAuth(app);
+        }
+
+        public void ConfigureOAuth(IAppBuilder app)
+        {
         }
     }
 }
