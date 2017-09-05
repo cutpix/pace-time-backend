@@ -2,3 +2,5 @@ E:\GitHub\pace-time-backend\Core\PaceTime.Domain.Models\bin\Debug\PaceTime.Domai
 E:\GitHub\pace-time-backend\Core\PaceTime.Domain.Models\bin\Debug\PaceTime.Domain.Models.pdb
 E:\GitHub\pace-time-backend\Core\PaceTime.Domain.Models\obj\Debug\PaceTime.Domain.Models.dll
 E:\GitHub\pace-time-backend\Core\PaceTime.Domain.Models\obj\Debug\PaceTime.Domain.Models.pdb
+E:\GitHub\pace-time-backend\Core\PaceTime.Domain.Models\obj\Debug\PaceTime.Domain.Models.csprojResolveAssemblyReference.cache
+E:\GitHub\pace-time-backend\Core\PaceTime.Domain.Models\obj\Debug\PaceTime.Domain.Models.csproj.CoreCompileInputs.cache

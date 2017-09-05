@@ -54,3 +54,4 @@ E:\GitHub\pace-time-backend\Presentation\PaceTime.WebAPI\obj\Debug\PaceTime.WebA
 E:\GitHub\pace-time-backend\Presentation\PaceTime.WebAPI\obj\Debug\PaceTime.WebAPI.pdb
 E:\GitHub\pace-time-backend\Presentation\PaceTime.WebAPI\bin\PaceTime.Domain.Models.dll
 E:\GitHub\pace-time-backend\Presentation\PaceTime.WebAPI\bin\PaceTime.Domain.Models.pdb
+E:\GitHub\pace-time-backend\Presentation\PaceTime.WebAPI\obj\Debug\PaceTime.WebAPI.csproj.CoreCompileInputs.cache
