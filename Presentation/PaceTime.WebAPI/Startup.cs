@@ -6,6 +6,8 @@ using PaceTime.WebAPI.Data;
 using PaceTime.WebAPI.Managers;
 using System.Configuration;
 using Microsoft.Owin.Security.DataHandler.Encoder;
+using Microsoft.Owin.Security.Jwt;
+using Microsoft.Owin.Security;
 
 [assembly: OwinStartup(typeof(PaceTime.WebAPI.Startup))]
 
@@ -25,6 +27,16 @@ namespace PaceTime.WebAPI
 
             app.CreatePerOwinContext(() => new BooksContext());
             app.CreatePerOwinContext(() => new BookUserManager());
+
+            app.UseJwtBearerAuthentication(new JwtBearerAuthenticationOptions
+            {
+                AuthenticationMode = AuthenticationMode.Active,
+                AllowedAudiences = new[] { "Any" },
+                IssuerSecurityTokenProviders = new IIssuerSecurityTokenProvider[]
+                {
+                    new SymmetricKeyIssuerSecurityTokenProvider(issuer, secret)
+                }
+            });
         }
     }
 }
