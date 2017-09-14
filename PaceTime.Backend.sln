@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C7BFB5FE-06FC-4699-B426-439DB4C2509C}"
 EndProject
@@ -10,11 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaceTime.Domain.Models", "Core\PaceTime.Domain.Models\PaceTime.Domain.Models.csproj", "{0C2C0037-949E-4541-96E7-81AB5C22AB6A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaceTime.WebAPI", "Presentation\PaceTime.WebAPI\PaceTime.WebAPI.csproj", "{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{88257D4A-34D3-4C44-AB48-EBC860CD0A99}"
-	ProjectSection(SolutionItems) = preProject
-		readme.txt = readme.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,5 +32,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0C2C0037-949E-4541-96E7-81AB5C22AB6A} = {9E93762E-5531-436F-B109-BFDCB4106552}
 		{0CEB7174-2BC7-4F2A-AE00-12ECBC5965B0} = {C7BFB5FE-06FC-4699-B426-439DB4C2509C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {221EB0CB-0B7A-4A86-BF79-5C3A1592D003}
 	EndGlobalSection
 EndGlobal
