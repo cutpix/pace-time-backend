@@ -32,7 +32,7 @@ namespace PaceTime.WebAPI.Data
 
             if (!context.Users.Any())
             {
-                var administrator = context.Users.Add(new IdentityUser("administrator") { Email = "admin@somesite.com", EmailConfirmed = true });
+                var administrator = context.Users.Add(new IdentityUser("admin") { Email = "admin@somesite.com", EmailConfirmed = true });
                 administrator.Roles.Add(new IdentityUserRole { RoleId = adminRoleId });
 
                 var standardUser = context.Users.Add(new IdentityUser("jonpreece") { Email = "jon@somesite.com", EmailConfirmed = true });
