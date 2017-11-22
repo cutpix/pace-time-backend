@@ -39,7 +39,7 @@ namespace PaceTime.WebAPI
             {
                 AuthenticationType = DefaultAuthenticationTypes.ExternalBearer,
                 AuthenticationMode = AuthenticationMode.Active,
-                AllowedAudiences = new[] { "Any", audience },
+                AllowedAudiences = new[] { audience },
                 IssuerSecurityTokenProviders = new IIssuerSecurityTokenProvider[]
                 {
                     new SymmetricKeyIssuerSecurityTokenProvider(issuer, secret)
