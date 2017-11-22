@@ -8,6 +8,9 @@ using System.Configuration;
 using Microsoft.Owin.Security.DataHandler.Encoder;
 using Microsoft.Owin.Security.Jwt;
 using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.OAuth;
+using BooksAPI.Identity;
+using PaceTime.WebAPI.Identity;
 
 [assembly: OwinStartup(typeof(PaceTime.WebAPI.Startup))]
 
@@ -36,6 +39,15 @@ namespace PaceTime.WebAPI
                 {
                     new SymmetricKeyIssuerSecurityTokenProvider(issuer, secret)
                 }
+            });
+
+            app.UseOAuthAuthorizationServer(new OAuthAuthorizationServerOptions
+            {
+                AllowInsecureHttp = true,
+                TokenEndpointPath = new PathString("/oauth2/token"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(30),
+                Provider = new CustomOAuthProvider(),
+                AccessTokenFormat = new CustomJwtFormat(issuer)
             });
         }
     }
