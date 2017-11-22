@@ -15,7 +15,9 @@ namespace PaceTime.WebAPI
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
             GlobalConfiguration.Configure(FilterConfig.Configure);
-            Database.SetInitializer(new Initializer());
+
+            Database.SetInitializer<BooksContext>(new BooksInitializer());
+            Database.SetInitializer<SecurityContext>(new SecurityInitializer());
         }
     }
 }

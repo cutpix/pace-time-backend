@@ -6,10 +6,10 @@ using System.Web;
 
 namespace PaceTime.WebAPI.Data
 {
-    public class BookUserStore : UserStore<IdentityUser>
+    public class SecurityContext : IdentityDbContext
     {
-        public BookUserStore()
-            : base(new BooksContext())
+        public SecurityContext()
+            : base("SecurityContext")
         {
         }
     }

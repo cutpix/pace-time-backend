@@ -9,9 +9,9 @@ using System.Web;
 
 namespace PaceTime.WebAPI.Data
 {
-    public class Configuration : DbMigrationsConfiguration<BooksContext>
+    public class BooksConfiguration : DbMigrationsConfiguration<BooksContext>
     {
-        public Configuration()
+        public BooksConfiguration()
         {
             this.AutomaticMigrationsEnabled = true;
             this.AutomaticMigrationDataLossAllowed = false;
@@ -73,38 +73,7 @@ namespace PaceTime.WebAPI.Data
             //    ImageUrl = "http://ecx.images-amazon.com/images/I/41pmjXYdOHL._SX309_BO1,204,203,200_.jpg"
             //});
 
-
-            // Seeding users to database
-            string adminRoleId, userRoleId;
-            if (!context.Roles.Any())
-            {
-                adminRoleId = context.Roles.Add(new IdentityRole("Administrator")).Id;
-                userRoleId = context.Roles.Add(new IdentityRole("User")).Id;
-            }
-            else
-            {
-                adminRoleId = context.Roles.First(c => c.Name == "Administrator").Id;
-                userRoleId = context.Roles.First(c => c.Name == "User").Id;
-            }
-
-            context.SaveChanges();
-
-            if (!context.Users.Any())
-            {
-                var administrator = context.Users.Add(new IdentityUser("administrator") { Email = "admin@somesite.com", EmailConfirmed = true });
-                administrator.Roles.Add(new IdentityUserRole { RoleId = adminRoleId });
-
-                var standardUser = context.Users.Add(new IdentityUser("jonpreece") { Email = "jon@somesite.com", EmailConfirmed = true });
-                standardUser.Roles.Add(new IdentityUserRole { RoleId = userRoleId });
-
-                context.SaveChanges();
-
-                var store = new BookUserStore();
-                store.SetPasswordHashAsync(administrator, new BookUserManager().PasswordHasher.HashPassword("admin123"));
-                store.SetPasswordHashAsync(standardUser, new BookUserManager().PasswordHasher.HashPassword("user123"));
-            }
-
-            context.SaveChanges();
+            //context.SaveChanges();
 
             base.Seed(context);
         }

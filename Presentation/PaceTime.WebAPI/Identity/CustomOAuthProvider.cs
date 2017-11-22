@@ -20,8 +20,8 @@ namespace PaceTime.WebAPI.Identity
         {
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
-            var user = context.OwinContext.Get<BooksContext>().Users.FirstOrDefault(u => u.UserName == context.UserName);
-            if (!context.OwinContext.Get<BookUserManager>().CheckPassword(user, context.Password))
+            var user = context.OwinContext.Get<SecurityContext>().Users.FirstOrDefault(u => u.UserName == context.UserName);
+            if (!context.OwinContext.Get<SecurityUserManager>().CheckPassword(user, context.Password))
             {
                 context.SetError("invalid_grant", "The user name or password is incorrect");
                 context.Rejected();
@@ -46,7 +46,7 @@ namespace PaceTime.WebAPI.Identity
             identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
             identity.AddClaim(new Claim("sub", context.UserName));
 
-            var userRoles = context.OwinContext.Get<BookUserManager>().GetRoles(user.Id);
+            var userRoles = context.OwinContext.Get<SecurityUserManager>().GetRoles(user.Id);
             foreach (var role in userRoles)
             {
                 identity.AddClaim(new Claim(ClaimTypes.Role, role));

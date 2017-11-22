@@ -8,10 +8,10 @@ using System.Web;
 
 namespace PaceTime.WebAPI.Managers
 {
-    public class BookUserManager : UserManager<IdentityUser>
+    public class SecurityUserManager : UserManager<IdentityUser>
     {
-        public BookUserManager()
-            : base(new BookUserStore())
+        public SecurityUserManager()
+            : base(new SecurityUserStore())
         {
         }
     }

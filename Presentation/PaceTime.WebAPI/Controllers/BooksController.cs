@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace PaceTime.WebAPI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class BooksController : ApiController
     {
         [HttpGet]

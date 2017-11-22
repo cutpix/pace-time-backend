@@ -29,7 +29,8 @@ namespace PaceTime.WebAPI
             var secret = TextEncodings.Base64Url.Decode(ConfigurationManager.AppSettings["secret"]);
 
             app.CreatePerOwinContext(() => new BooksContext());
-            app.CreatePerOwinContext(() => new BookUserManager());
+            app.CreatePerOwinContext(() => new SecurityContext());
+            app.CreatePerOwinContext(() => new SecurityUserManager());
 
             app.UseJwtBearerAuthentication(new JwtBearerAuthenticationOptions
             {
