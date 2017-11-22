@@ -45,8 +45,6 @@ namespace PaceTime.WebAPI.Data
                 store.SetPasswordHashAsync(standardUser, new SecurityUserManager().PasswordHasher.HashPassword("user123"));
             }
 
-            context.SaveChanges();
-
             base.Seed(context);
         }
     }

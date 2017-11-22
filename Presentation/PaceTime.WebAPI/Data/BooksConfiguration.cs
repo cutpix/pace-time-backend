@@ -73,7 +73,7 @@ namespace PaceTime.WebAPI.Data
             //    ImageUrl = "http://ecx.images-amazon.com/images/I/41pmjXYdOHL._SX309_BO1,204,203,200_.jpg"
             //});
 
-            //context.SaveChanges();
+            context.SaveChanges();
 
             base.Seed(context);
         }
