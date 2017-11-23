@@ -152,6 +152,7 @@
     <Compile Include="App_Start\PreflightRequestsHandler.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\PersonalTrainerController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Data\BooksContext.cs" />
     <Compile Include="Data\SecurityConfiguration.cs" />

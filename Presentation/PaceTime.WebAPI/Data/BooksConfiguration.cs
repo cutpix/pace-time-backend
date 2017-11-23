@@ -19,12 +19,53 @@ namespace PaceTime.WebAPI.Data
 
         protected override void Seed(BooksContext context)
         {
-            //SaveNewBooksData(context);
+            AddNewExercises(context);
 
             base.Seed(context);
         }
 
-        private static void SaveNewBooksData(BooksContext context)
+        private static void AddNewExercises(BooksContext context)
+        {
+            context.Exercises.AddOrUpdate(new Exercise
+            {
+                Id = Guid.NewGuid(),
+                Naming = "Трицепс"
+            });
+
+            context.Exercises.AddOrUpdate(new Exercise
+            {
+                Id = Guid.NewGuid(),
+                Naming = "Бицепс"
+            });
+
+            context.Exercises.AddOrUpdate(new Exercise
+            {
+                Id = Guid.NewGuid(),
+                Naming = "Подтягивания"
+            });
+
+            context.Exercises.AddOrUpdate(new Exercise
+            {
+                Id = Guid.NewGuid(),
+                Naming = "Брусья"
+            });
+
+            context.Exercises.AddOrUpdate(new Exercise
+            {
+                Id = Guid.NewGuid(),
+                Naming = "Плечи"
+            });
+
+            context.Exercises.AddOrUpdate(new Exercise
+            {
+                Id = Guid.NewGuid(),
+                Naming = "Отжимания"
+            });
+
+            context.SaveChanges();
+        }
+
+        private static void AddNewBooks(BooksContext context)
         {
             context.Books.AddOrUpdate(new Book
             {
