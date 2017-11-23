@@ -152,12 +152,12 @@
     <Compile Include="App_Start\PreflightRequestsHandler.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BooksController.cs" />
-    <Compile Include="Controllers\PersonalTrainerController.cs" />
+    <Compile Include="Controllers\FitnessController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
-    <Compile Include="Data\BooksContext.cs" />
+    <Compile Include="Data\FitnessContext.cs" />
     <Compile Include="Data\SecurityConfiguration.cs" />
     <Compile Include="Data\SecurityUserStore.cs" />
-    <Compile Include="Data\BooksConfiguration.cs" />
+    <Compile Include="Data\FitnessConfiguration.cs" />
     <Compile Include="Data\Initializers.cs" />
     <Compile Include="Data\SecurityContext.cs" />
     <Compile Include="Global.asax.cs">

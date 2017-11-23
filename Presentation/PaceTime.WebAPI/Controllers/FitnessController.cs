@@ -6,19 +6,19 @@ using System.Data.Entity;
 
 namespace PaceTime.WebAPI.Controllers
 {
-    public class PersonalTrainerController : ApiController
+    public class FitnessController : ApiController
     {
         [HttpGet]
         public async Task<IHttpActionResult> GetExercises()
         {
-            using (var db = new BooksContext())
+            using (var db = new FitnessContext())
                 return Ok(await db.Exercises.ToListAsync());
         }
 
         [HttpPost]
         public async Task<IHttpActionResult> StartTrainingSession()
         {
-            using (var db = new BooksContext())
+            using (var db = new FitnessContext())
             {
                 var session = db.TrainingSessions.Create();
 

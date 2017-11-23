@@ -6,9 +6,9 @@ using System.Web;
 
 namespace PaceTime.WebAPI.Data
 {
-    public class BooksInitializer : MigrateDatabaseToLatestVersion<BooksContext, BooksConfiguration>
+    public class FitnessInitializer : MigrateDatabaseToLatestVersion<FitnessContext, FitnessConfiguration>
     {
-        public override void InitializeDatabase(BooksContext context)
+        public override void InitializeDatabase(FitnessContext context)
         {
             base.InitializeDatabase(context);
         }

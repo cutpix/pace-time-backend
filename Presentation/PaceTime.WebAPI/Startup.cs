@@ -30,7 +30,7 @@ namespace PaceTime.WebAPI
             var audience = ConfigurationManager.AppSettings["audience"];
             var secret = TextEncodings.Base64Url.Decode(ConfigurationManager.AppSettings["secret"]);
 
-            app.CreatePerOwinContext(() => new BooksContext());
+            app.CreatePerOwinContext(() => new FitnessContext());
             app.CreatePerOwinContext(() => new SecurityContext());
             app.CreatePerOwinContext(() => new SecurityUserManager());
 

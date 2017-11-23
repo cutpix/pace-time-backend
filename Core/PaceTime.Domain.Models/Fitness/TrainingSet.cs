@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PaceTime.Domain.Models
+namespace PaceTime.Domain.Models.Fitness
 {
     public class TrainingSet
     {

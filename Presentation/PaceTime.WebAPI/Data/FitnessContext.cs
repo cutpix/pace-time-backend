@@ -1,20 +1,18 @@
 ﻿using PaceTime.Domain.Models;
+using PaceTime.Domain.Models.Fitness;
 using System.Data.Entity;
 
 
 namespace PaceTime.WebAPI.Data
 {
-    public class BooksContext : DbContext
+    public class FitnessContext : DbContext
     {
-        public DbSet<Book> Books { get; set; }
-        public DbSet<Review> Reviews { get; set; }
-
         public DbSet<TrainingSession> TrainingSessions { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<TrainingSet> TrainingSets { get; set; }
 
-        public BooksContext()
-            : base("BooksContext")
+        public FitnessContext()
+            : base("FitnessContext")
         {
         }
 

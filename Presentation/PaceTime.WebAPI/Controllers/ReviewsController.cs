@@ -14,43 +14,43 @@ namespace PaceTime.WebAPI.Controllers
 {
     public class ReviewsController : ApiController
     {
-        [HttpPost]
-        public async Task<IHttpActionResult> Post([FromBody] ReviewModel review)
-        {
-            using (var context = new BooksContext())
-            {
-                var book = await context.Books.FirstOrDefaultAsync(x => x.Id == Guid.Parse(review.BookId));
-                if (book == null)
-                    return NotFound();
+        //[HttpPost]
+        //public async Task<IHttpActionResult> Post([FromBody] ReviewModel review)
+        //{
+        //    using (var context = new FitnessContext())
+        //    {
+        //        var book = await context.Books.FirstOrDefaultAsync(x => x.Id == Guid.Parse(review.BookId));
+        //        if (book == null)
+        //            return NotFound();
 
-                var newReview = context.Reviews.Add(new Review
-                {
-                    BookId = book.Id,
-                    Description = review.Description,
-                    Rating = review.Rating
-                });
+        //        var newReview = context.Reviews.Add(new Review
+        //        {
+        //            BookId = book.Id,
+        //            Description = review.Description,
+        //            Rating = review.Rating
+        //        });
 
-                await context.SaveChangesAsync();
+        //        await context.SaveChangesAsync();
 
-                return Ok(new ReviewModel(newReview));
-            }
-        }
+        //        return Ok(new ReviewModel(newReview));
+        //    }
+        //}
 
-        [HttpDelete]
-        public async Task<IHttpActionResult> Delete(string id)
-        {
-            using (var context = new BooksContext())
-            {
-                var review = await context.Reviews.FirstOrDefaultAsync(x => x.Id == Guid.Parse(id));
-                if (review == null)
-                    return NotFound();
+        //[HttpDelete]
+        //public async Task<IHttpActionResult> Delete(string id)
+        //{
+        //    using (var context = new FitnessContext())
+        //    {
+        //        var review = await context.Reviews.FirstOrDefaultAsync(x => x.Id == Guid.Parse(id));
+        //        if (review == null)
+        //            return NotFound();
 
-                context.Reviews.Remove(review);
+        //        context.Reviews.Remove(review);
 
-                await context.SaveChangesAsync();
-            }
+        //        await context.SaveChangesAsync();
+        //    }
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
     }
 }
