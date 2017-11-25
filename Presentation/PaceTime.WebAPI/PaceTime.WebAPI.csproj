@@ -167,6 +167,7 @@
     <Compile Include="Identity\CustomOAuthProvider.cs" />
     <Compile Include="Managers\SecurityUserManager.cs" />
     <Compile Include="Models\ReviewModel.cs" />
+    <Compile Include="Models\TrainingSetModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

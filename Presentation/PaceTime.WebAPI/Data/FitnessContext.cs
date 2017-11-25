@@ -21,7 +21,7 @@ namespace PaceTime.WebAPI.Data
             // Primary Keys
             builder.Entity<TrainingSession>().HasKey(q => q.Id);
             builder.Entity<Exercise>().HasKey(q => q.Id);
-            builder.Entity<TrainingSet>().HasKey(q => new { q.TrainingSessionId, q.ExerciseId });
+            builder.Entity<TrainingSet>().HasKey(q => new { q.Id, q.TrainingSessionId, q.ExerciseId });
 
             // Relationships
             builder.Entity<TrainingSet>()
