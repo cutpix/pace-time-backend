@@ -8,7 +8,7 @@ namespace PaceTime.Domain.Models.Fitness
 {
     public class TrainingSet
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; }
         public DateTimeOffset EndTime { get; set; }
         public int Repetitions { get; set; }
 

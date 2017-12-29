@@ -14,7 +14,6 @@ namespace PaceTime.Domain.Models.Fitness
 
         public TrainingSession()
         {
-            Id = Guid.NewGuid();
             Date = DateTimeOffset.Now;
             Sets = new HashSet<TrainingSet>();
         }

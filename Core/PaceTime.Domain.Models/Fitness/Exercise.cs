@@ -14,7 +14,6 @@ namespace PaceTime.Domain.Models.Fitness
 
         public Exercise()
         {
-            Id = Guid.NewGuid();
             Sets = new HashSet<TrainingSet>();
         }
     }

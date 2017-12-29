@@ -26,7 +26,7 @@ namespace PaceTime.WebAPI.Controllers
                     Created = session.Date,
                     Exercises = session.Sets.GroupBy(x => x.Exercise.Naming).Select(x => new
                     {
-                        Naming = x.FirstOrDefault()?.Exercise.Naming,
+                        x.FirstOrDefault()?.Exercise.Naming,
                         Sets = x.Count(),
                         Reps = x.OrderBy(s => s.EndTime).Select(s => s.Repetitions).ToArray()
                     }).ToArray()
@@ -57,12 +57,11 @@ namespace PaceTime.WebAPI.Controllers
             using (var db = new FitnessContext())
             {
                 var session = db.TrainingSessions.Create();
-
-                newSessionId = db.TrainingSessions.Add(session).Id;
+                db.TrainingSessions.Add(session);
                 await db.SaveChangesAsync();
             }
 
-            return Ok(new { sessionId = newSessionId });
+            return Ok(new { status = Progress.Started });
         }
 
         [HttpPost, Route("training/{sessionId}/session/set")]
